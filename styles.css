@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans";
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--dark-cyan);
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.top{
+    position: absolute;
+    top: -55%;
+    left: -250px;
+    width: 900px;
+    z-index: -1;
+}
+
+.bottom{
+    position: absolute;
+    top: 50%;
+    right:  -250px;
+    width: 900px;
+    z-index: -1;
+}
+
+.card{
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card .pattern{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.avatar{
+    position: relative;
+    top: -50px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.card .content .user{
+    position: relative;
+    top: -30px;
+    text-align: center;
+}
+
+.card .content .user p{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.card .content .user p span{
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+}
+
+.card .content .user span{
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.social-stats{
+    width: 100%;
+    padding: 30px 40px;
+    border-top: 1px solid var(--dark-gray);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 16px;
+}
+
+.social-stats span{
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+@media(max-width: 800px){
+    .top{
+        position: absolute;
+        top: -40%;
+        left: -250px;
+        width: 500px;
+    }
+    
+    .bottom{
+        position: absolute;
+        right: -250px;
+        width: 500px;
+        top: 60%;
+    }
+}
+
